@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
-function Onboard() {
+import { useNavigate } from 'react-router-dom';
+
+const Onboard = ({getStats}) => {
 
   const [name, setName]=useState("");
   const [accountType, setAccountType]=useState("");
   const [timeWindow, setTimeWindow]=useState("");
   const [image, setImage]=useState("");
+  const [userStats, setUserStats]=useState({});
+  const navigate = useNavigate();
 
   const handleOnSubmit = e => {
     e.preventDefault()
@@ -17,7 +21,20 @@ function Onboard() {
     
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data);
+      const stats = {
+        name: data.data.account.name,
+        stats: data.data.stats.all
+      }
+      setUserStats(stats);
+      getStats(stats);
+      console.log(stats)
+
+      navigate('/stats')
+          
+    })
+      
   }
   
   return (
