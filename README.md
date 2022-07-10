@@ -8,4 +8,4 @@ A space for noobs to collaborate, from gaming, anime to new tech!
 
 
 ## Get to know the authors
-The noobs were formed of a group 
+info coming soon
