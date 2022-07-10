@@ -1,0 +1,30 @@
+.nav-link{
+  color: #1A244C;
+}
+
+.nav-link:hover{
+  color: #000;
+}
+
+.nav {
+  margin: auto;
+}
+
+.navbar {
+  background-color: #fdf678;
+  padding: 0rem;
+}
+
+.logo {
+  width: 50px;
+}
+
+button {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.btn-colour {
+  color: #fdf678;
+  background-color: #000;
+}

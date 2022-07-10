@@ -7,7 +7,6 @@ const Onboard = ({getStats}) => {
   const [accountType, setAccountType]=useState("");
   const [timeWindow, setTimeWindow]=useState("");
   const [image, setImage]=useState("");
-  const [userStats, setUserStats]=useState({});
   const navigate = useNavigate();
 
   const handleOnSubmit = e => {
@@ -23,14 +22,15 @@ const Onboard = ({getStats}) => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      const stats = {
+      const fortniteStats = {
         name: data.data.account.name,
-        stats: data.data.stats.all
+        stats: data.data.stats.all,
+        image: data.data.image,
+        gameLevel: data.data.battlePass.level,
+        kills: data.data.stats.all.overall.kills,
+        wins: data.data.stats.all.overall.wins
       }
-      setUserStats(stats);
-      getStats(stats);
-      console.log(stats)
-
+      getStats(fortniteStats);
       navigate('/stats')
           
     })

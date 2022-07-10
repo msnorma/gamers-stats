@@ -1,10 +1,13 @@
 import React from 'react';
+import '../styles/Home.css';
 
 function Home() {
   return (
-    <div className="wrapper">
-     <h1>Home Page</h1>
+    <div className="hero-image">
+      <div className="hero-text">
+      </div>
     </div>
+
   );
 }
 

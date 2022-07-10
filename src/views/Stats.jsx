@@ -1,13 +1,12 @@
 import React from 'react';
-// import GamerCard from '../components/GamerCard';
+import GamerCard from '../components/GamerCard';
+import "../styles/Stats.css";
 
 function Stats({stats}) {
 
   return (
-    
-    <div className="wrapper">
-     <h1>Stats Page</h1>
-     <h3>{stats.name}</h3>
+    <div className="container-stats">
+     <GamerCard fortniteStats={stats}/>
     </div>
   );
 }
