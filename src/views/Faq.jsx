@@ -1,9 +1,11 @@
 import React from 'react';
+import SearchBar from '../components/SearchBar';
 
 function Faq() {
   return (
-    <div className="wrapper">
-     <h1>FAQ Page</h1>
+    <div>
+     <h4 className="text-center mb-4" style={{marginTop:'100px'}}>Hello, how can we help?</h4>
+     <SearchBar/>
     </div>
   );
 }
