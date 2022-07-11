@@ -1,17 +1,18 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import {Form, Card, Button} from 'react-bootstrap';
+import avi from '../assets/black.png';
 
 const Onboard = ({getStats}) => {
 
   const [name, setName]=useState("");
   const [accountType, setAccountType]=useState("");
-  const [timeWindow, setTimeWindow]=useState("");
-  const [image, setImage]=useState("");
   const navigate = useNavigate();
 
   const handleOnSubmit = e => {
+    var status;
     e.preventDefault()
-    fetch(`https://fortnite-api.com/v2/stats/br/v2?name=${name}&accountType=${accountType}&timeWindow=${timeWindow}&image=${image}`,{
+    fetch(`https://fortnite-api.com/v2/stats/br/v2?name=${name}&accountType=${accountType}&timeWindow=season&image=none`,{
       method: 'GET',
       headers: new Headers({
         'Authorization': process.env.REACT_APP_API_KEY,
@@ -19,9 +20,12 @@ const Onboard = ({getStats}) => {
       })
     
     })
-    .then(res => res.json())
+    .then(res => {
+      status = res.status;
+      res.json();
+      if (status !== 200){navigate('/notFound')}
+    })
     .then(data => {
-      console.log(data);
       const fortniteStats = {
         name: data.data.account.name,
         stats: data.data.stats.all,
@@ -32,42 +36,39 @@ const Onboard = ({getStats}) => {
       }
       getStats(fortniteStats);
       navigate('/stats')
-          
     })
       
   }
   
   return (
-    <div className="wrapper">
-     <h1>Onboard User Page</h1>
-     <form onSubmit={handleOnSubmit}>
-      <input
-        placeholder='Enter username...' 
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input 
-        placeholder='Enter accountType...'
-        type="text"
-        value={accountType}
-        onChange={(e) => setAccountType(e.target.value)}
-      />
-      <input 
-        placeholder='Enter timeWindow...'
-        type="text"
-        value={timeWindow}
-        onChange={(e) => setTimeWindow(e.target.value)}
-      />
-      <input
-        placeholder='Enter image...'
-        type="text"
-        value={image}
-        onChange={(e) => setImage(e.target.value)}
-      />
-      <button className="button-submit" type="submit" >Submit</button>
-     </form>
-    </div>
+      <><h4 className="text-center mt-5">Placeholder</h4>
+      <Form onSubmit={handleOnSubmit}>
+      <Card className="m-auto my-5 p-2 centered border-0 shadow-sm mb-5 bg-white rounded" style={{ width: '18rem', borderRadius: '20px' }}>
+        <Card.Img variant="top" src={avi} style={{ borderRadius: '20px' }} />
+        <Card.Body>
+          <Card.Text className="m-0" style={{ textAlign: 'center' }}>
+            <b>What to join the leaderboard,</b> <small>sign up below!</small>
+          </Card.Text>
+          <Form.Control
+            type="text"
+            placeholder="Enter username"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="mt-4"
+            style={{ borderRadius: '12px' }} />
+          <Form.Control
+            type="text"
+            placeholder="Enter account (epic/xbl/psn)"
+            value={accountType}
+            onChange={(e) => setAccountType(e.target.value)}
+            className="mt-3"
+            style={{ borderRadius: '12px' }} />
+            <div className='text-center mt-3'>
+              <Button className="m-0 border-0" type="submit" size="sm" style={{backgroundColor:'#D4254C'}}>Lets go</Button>
+            </div>
+        </Card.Body>
+      </Card>
+    </Form></>
   );
 }
 
