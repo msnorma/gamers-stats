@@ -35,8 +35,9 @@ const Onboard = ({getStats}) => {
         wins: data.data.stats.all.overall.wins
       }
       getStats(fortniteStats);
-      navigate('/stats')
+      
     })
+    navigate('/stats')
       
   }
   
@@ -55,14 +56,14 @@ const Onboard = ({getStats}) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="mt-4"
-            style={{ borderRadius: '12px' }} />
+            style={{ borderRadius: '12px' }} required/>
           <Form.Control
             type="text"
             placeholder="Enter account (epic/xbl/psn)"
             value={accountType}
             onChange={(e) => setAccountType(e.target.value)}
             className="mt-3"
-            style={{ borderRadius: '12px' }} />
+            style={{ borderRadius: '12px' }} required/>
             <div className='text-center mt-3'>
               <Button className="m-0 border-0" type="submit" size="sm" style={{backgroundColor:'#D4254C'}}>Lets go</Button>
             </div>

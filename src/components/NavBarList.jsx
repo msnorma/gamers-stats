@@ -12,12 +12,16 @@ const NavBarList = [
     route: '/about'
   },
   {
-    name: 'FAQ',
-    route: '/faq'
-  },
-  {
     name: 'Onboard',
     route: '/onboard'
+  },
+  {
+    name: 'Challenges',
+    route: '/challenges'
+  },
+  {
+    name: 'FAQ',
+    route: '/faq'
   },
 ]
 
