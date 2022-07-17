@@ -24,11 +24,17 @@
 
 .app {
   margin: 0 auto;
+  display: flex;
+  margin-top: 0px;
 }
 
 .container-footer {
   position: absolute;
   bottom: 0;
+}
+
+.container-content {
+  flex: 4;
 }
 
 @keyframes App-logo-spin {

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function About() {
+function News() {
   return (
     <div className="container-content">
-     <h1>About Page</h1>
+     <h1>News Page</h1>
     </div>
   );
 }
 
-export default About;
+export default News;

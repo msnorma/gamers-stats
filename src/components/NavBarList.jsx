@@ -2,10 +2,13 @@ const NavBarList = [
   {
     name: 'Home',
     route: '/'
+  },{
+    name: 'Community',
+    route: '/community'
   },
   {
-    name: 'Stats',
-    route: '/stats'
+    name: 'News',
+    route: '/news'
   },
   {
     name: 'About',
@@ -14,10 +17,6 @@ const NavBarList = [
   {
     name: 'FAQ',
     route: '/faq'
-  },
-  {
-    name: 'Onboard',
-    route: '/onboard'
   },
 ]
 

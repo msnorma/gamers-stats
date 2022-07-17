@@ -10,7 +10,6 @@ const Onboard = ({getStats}) => {
   const navigate = useNavigate();
 
   const handleOnSubmit = e => {
-    var status;
     e.preventDefault()
     fetch(`https://fortnite-api.com/v2/stats/br/v2?name=${name}&accountType=${accountType}&timeWindow=season&image=none`,{
       method: 'GET',
@@ -20,12 +19,9 @@ const Onboard = ({getStats}) => {
       })
     
     })
-    .then(res => {
-      status = res.status;
-      res.json();
-      if (status !== 200){navigate('/notFound')}
-    })
+    .then(res => {res.json()})
     .then(data => {
+      console.log(data);
       const fortniteStats = {
         name: data.data.account.name,
         stats: data.data.stats.all,
@@ -35,14 +31,14 @@ const Onboard = ({getStats}) => {
         wins: data.data.stats.all.overall.wins
       }
       getStats(fortniteStats);
-      navigate('/stats')
+      
     })
+    navigate('/stats')
       
   }
   
   return (
-      <><h4 className="text-center mt-5">Placeholder</h4>
-      <Form onSubmit={handleOnSubmit}>
+      <Form onSubmit={handleOnSubmit} className="container-content">
       <Card className="m-auto my-5 p-2 centered border-0 shadow-sm mb-5 bg-white rounded" style={{ width: '18rem', borderRadius: '20px' }}>
         <Card.Img variant="top" src={avi} style={{ borderRadius: '20px' }} />
         <Card.Body>
@@ -55,20 +51,20 @@ const Onboard = ({getStats}) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="mt-4"
-            style={{ borderRadius: '12px' }} />
+            style={{ borderRadius: '12px' }} required/>
           <Form.Control
             type="text"
             placeholder="Enter account (epic/xbl/psn)"
             value={accountType}
             onChange={(e) => setAccountType(e.target.value)}
             className="mt-3"
-            style={{ borderRadius: '12px' }} />
+            style={{ borderRadius: '12px' }} required/>
             <div className='text-center mt-3'>
               <Button className="m-0 border-0" type="submit" size="sm" style={{backgroundColor:'#D4254C'}}>Lets go</Button>
             </div>
         </Card.Body>
       </Card>
-    </Form></>
+    </Form>
   );
 }
 
