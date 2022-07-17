@@ -10,7 +10,6 @@ const Onboard = ({getStats}) => {
   const navigate = useNavigate();
 
   const handleOnSubmit = e => {
-    var status;
     e.preventDefault()
     fetch(`https://fortnite-api.com/v2/stats/br/v2?name=${name}&accountType=${accountType}&timeWindow=season&image=none`,{
       method: 'GET',
@@ -20,12 +19,9 @@ const Onboard = ({getStats}) => {
       })
     
     })
-    .then(res => {
-      status = res.status;
-      res.json();
-      if (status !== 200){navigate('/notFound')}
-    })
+    .then(res => {res.json()})
     .then(data => {
+      console.log(data);
       const fortniteStats = {
         name: data.data.account.name,
         stats: data.data.stats.all,
@@ -42,8 +38,7 @@ const Onboard = ({getStats}) => {
   }
   
   return (
-      <><h4 className="text-center mt-5">Placeholder</h4>
-      <Form onSubmit={handleOnSubmit}>
+      <Form onSubmit={handleOnSubmit} className="container-content">
       <Card className="m-auto my-5 p-2 centered border-0 shadow-sm mb-5 bg-white rounded" style={{ width: '18rem', borderRadius: '20px' }}>
         <Card.Img variant="top" src={avi} style={{ borderRadius: '20px' }} />
         <Card.Body>
@@ -69,7 +64,7 @@ const Onboard = ({getStats}) => {
             </div>
         </Card.Body>
       </Card>
-    </Form></>
+    </Form>
   );
 }
 

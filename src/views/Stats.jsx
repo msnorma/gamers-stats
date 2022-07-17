@@ -5,8 +5,10 @@ import "../styles/Stats.css";
 function Stats({stats}) {
 
   return (
-    <div className="container-stats">
-     <GamerCard fortniteStats={stats}/>
+    <div className="container-content">
+      <div className="container-stats">
+        <GamerCard fortniteStats={stats}/>
+      </div>
     </div>
   );
 }

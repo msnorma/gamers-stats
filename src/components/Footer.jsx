@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className="fixed-bottom" style={{backgroundColor:"#1A244C", color: "#fff", textAlign:"center"}}>
+    <div className="fixed-bottom" style={{color: "#000", textAlign:"center"}}>
       <small>footer</small>
     </div>
   );

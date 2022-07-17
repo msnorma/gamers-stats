@@ -3,9 +3,7 @@ import '../styles/Home.css';
 
 function Home() {
   return (
-    <div className="hero-image">
-      <div className="hero-text">
-      </div>
+    <div>
     </div>
 
   );

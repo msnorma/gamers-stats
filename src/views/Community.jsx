@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Community() {
+function Community({stats}) {
+
   return (
-    <div className="container">
-     <h1>Community Page</h1>
-     
+    <div className="container-content">
+
     </div>
   );
 }

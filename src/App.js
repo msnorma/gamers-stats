@@ -21,14 +21,14 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/community" element={<Community />}/>
+        <Route path="/community" element={<Community stats={stats}/>}/>
         <Route path="/news" element={<News />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/faq" element={<Faq />}/>
         <Route path="/notFound" element={<UserNotFound />}/>
         <Route path="/stats" element={<Stats stats={stats}/>}/>
         <Route element={<GamerCard stats={stats}/>}/>
-        <Route path="/onboard" element={<Onboard getStats={(stats)=>setStats(stats)} />}/>
+        <Route path="/onboard" element={<Onboard getStats={(stats)=>setStats(stats)}/>}/>
       </Routes>
       <Footer/>
     </div>
