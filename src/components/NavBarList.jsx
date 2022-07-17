@@ -2,22 +2,17 @@ const NavBarList = [
   {
     name: 'Home',
     route: '/'
+  },{
+    name: 'Community',
+    route: '/community'
   },
   {
-    name: 'Stats',
-    route: '/stats'
+    name: 'News',
+    route: '/news'
   },
   {
     name: 'About',
     route: '/about'
-  },
-  {
-    name: 'Onboard',
-    route: '/onboard'
-  },
-  {
-    name: 'Challenges',
-    route: '/challenges'
   },
   {
     name: 'FAQ',

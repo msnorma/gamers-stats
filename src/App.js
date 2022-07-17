@@ -9,6 +9,8 @@ import About from './views/About';
 import Faq from './views/Faq';
 import Footer from './components/Footer';
 import UserNotFound from './views/UserNorFound';
+import Community from './views/Community';
+import News from './views/News';
 import './styles/App.css';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/community" element={<Community />}/>
+        <Route path="/news" element={<News />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/faq" element={<Faq />}/>
         <Route path="/notFound" element={<UserNotFound />}/>
