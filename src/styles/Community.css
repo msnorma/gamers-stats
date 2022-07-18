@@ -1,0 +1,10 @@
+.card {
+  margin: 20px 20px 0px 20px;
+  border: 0rem;
+  border-radius: 0rem;
+}
+
+.card-image {
+  height: 30vh;
+  border-radius: 20px;
+}
