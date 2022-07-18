@@ -35,6 +35,11 @@
 
 .container-content {
   flex: 4;
+  margin: 0px 30px 0px 30px;
+}
+
+h3 {
+  margin: 20px 0px 10px 0px;
 }
 
 @keyframes App-logo-spin {
