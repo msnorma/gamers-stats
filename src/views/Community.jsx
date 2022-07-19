@@ -19,7 +19,7 @@ function Community({stats}) {
   }
 
   return (
-    <div className="container-content">
+    <div>
       <Card sx={{ width: '100%', height: '40vh', borderRadius: '15px', backgroundColor: '#596173'}}>
           <CardMedia
             // component="img"

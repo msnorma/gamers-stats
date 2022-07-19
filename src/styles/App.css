@@ -1,5 +1,5 @@
 body {
-  background-color: #3E4451;
+  background-color: #282c34;
 }
 
 .App {
@@ -38,8 +38,8 @@ body {
 }
 
 .container-content {
-  flex: 4;
-  margin: 40px 40px 0px 40px;
+  margin-top: 70px;
+  position: absolute;
 }
 
 h3 {
