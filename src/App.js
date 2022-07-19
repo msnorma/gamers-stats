@@ -5,7 +5,6 @@ import Stats from './views/Stats';
 import Onboard from './views/Onboard';
 import GamerCard from './components/GamerCard';
 import NavBar from './components/NavBar';
-import About from './views/About';
 import Faq from './views/Faq';
 import Footer from './components/Footer';
 import UserNotFound from './views/UserNorFound';
@@ -23,7 +22,6 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/community" element={<Community stats={stats}/>}/>
         <Route path="/news" element={<News />}/>
-        <Route path="/about" element={<About />}/>
         <Route path="/faq" element={<Faq />}/>
         <Route path="/notFound" element={<UserNotFound />}/>
         <Route path="/stats" element={<Stats stats={stats}/>}/>

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import {Form, Card, Button} from 'react-bootstrap';
-import avi from '../assets/black.png';
+// import avi from '../assets/black.png';
 
 const Onboard = ({getStats}) => {
 
@@ -38,33 +37,34 @@ const Onboard = ({getStats}) => {
   }
   
   return (
-      <Form onSubmit={handleOnSubmit} className="container-content">
-      <Card className="m-auto my-5 p-2 centered border-0 shadow-sm mb-5 bg-white rounded" style={{ width: '18rem', borderRadius: '20px' }}>
-        <Card.Img variant="top" src={avi} style={{ borderRadius: '20px' }} />
-        <Card.Body>
-          <Card.Text className="m-0" style={{ textAlign: 'center' }}>
-            <b>What to join the leaderboard,</b> <small>sign up below!</small>
-          </Card.Text>
-          <Form.Control
-            type="text"
-            placeholder="Enter username"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="mt-4"
-            style={{ borderRadius: '12px' }} required/>
-          <Form.Control
-            type="text"
-            placeholder="Enter account (epic/xbl/psn)"
-            value={accountType}
-            onChange={(e) => setAccountType(e.target.value)}
-            className="mt-3"
-            style={{ borderRadius: '12px' }} required/>
-            <div className='text-center mt-3'>
-              <Button className="m-0 border-0" type="submit" size="sm" style={{backgroundColor:'#D4254C'}}>Lets go</Button>
-            </div>
-        </Card.Body>
-      </Card>
-    </Form>
+    <h1>form</h1>
+    //   <Form onSubmit={handleOnSubmit} className="container-content">
+    //   <Card className="m-auto my-5 p-2 centered border-0 shadow-sm mb-5 bg-white rounded" style={{ width: '18rem', borderRadius: '20px' }}>
+    //     <Card.Img variant="top" src={avi} style={{ borderRadius: '20px' }} />
+    //     <Card.Body>
+    //       <Card.Text className="m-0" style={{ textAlign: 'center' }}>
+    //         <b>What to join the leaderboard,</b> <small>sign up below!</small>
+    //       </Card.Text>
+    //       <Form.Control
+    //         type="text"
+    //         placeholder="Enter username"
+    //         value={name}
+    //         onChange={(e) => setName(e.target.value)}
+    //         className="mt-4"
+    //         style={{ borderRadius: '12px' }} required/>
+    //       <Form.Control
+    //         type="text"
+    //         placeholder="Enter account (epic/xbl/psn)"
+    //         value={accountType}
+    //         onChange={(e) => setAccountType(e.target.value)}
+    //         className="mt-3"
+    //         style={{ borderRadius: '12px' }} required/>
+    //         <div className='text-center mt-3'>
+    //           <Button className="m-0 border-0" type="submit" size="sm" style={{backgroundColor:'#D4254C'}}>Lets go</Button>
+    //         </div>
+    //     </Card.Body>
+    //   </Card>
+    // </Form>
   );
 }
 

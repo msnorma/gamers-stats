@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
-import {Card, Navbar, Container, Nav} from 'react-bootstrap';
-import gameImage from "../assets/fortnite-banner.jpeg";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 import Challenge from "./Challenges";
 import Filter from "../components/List";
 import Tournaments from "./Tournaments";
@@ -17,19 +20,15 @@ function Community({stats}) {
 
   return (
     <div className="container-content">
-      <Card className="text-white">
-        <Card.Img className="card-image" src={gameImage} alt="Card image" />
-        <Card.ImgOverlay>
-          <Card.Title></Card.Title>
-          <Card.Text>
-            
-          </Card.Text>
-          <Card.Text></Card.Text>
-        </Card.ImgOverlay>
+      <Card sx={{ width: '100%', height: '40vh', borderRadius: '15px', backgroundColor: '#596173'}}>
+          <CardMedia
+            // component="img"
+            // image={gameCard}
+          />
       </Card>
-
+     
       <div style={{marginTop: '20px', marginRight: '20px', marginLeft: '20px'}}>
-        <Navbar bg="light" variant="light" style={{borderRadius: '20px'}}>
+        {/* <Navbar bg="light" variant="light" style={{borderRadius: '20px'}}>
           <Container>
             <Nav className="" style={{margin: 'auto'}}>
             {
@@ -42,7 +41,7 @@ function Community({stats}) {
             }
             </Nav>
           </Container>
-        </Navbar>
+        </Navbar> */}
       </div>
 
       <div>

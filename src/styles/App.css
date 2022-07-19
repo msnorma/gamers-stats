@@ -1,3 +1,7 @@
+body {
+  background-color: #3E4451;
+}
+
 .App {
   text-align: center;
 }
@@ -35,7 +39,7 @@
 
 .container-content {
   flex: 4;
-  margin: 0px 30px 0px 30px;
+  margin: 40px 40px 0px 40px;
 }
 
 h3 {
