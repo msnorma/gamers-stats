@@ -11,7 +11,6 @@ import UserNotFound from './views/UserNorFound';
 import Community from './views/Community';
 import News from './views/News';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import './styles/App.css';
 
 function App() {
@@ -23,8 +22,7 @@ function App() {
         <Grid item xs={12}>
           <NavBar/>
         </Grid>
-        <Grid item xs={12}>
-          <Box style={{ margin: '0px 50px 50px 50px',backgroundColor: '#23272E',height: '80vh'}}>
+        <Grid item xs={12} container>
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/community" element={<Community stats={stats}/>}/>
@@ -35,7 +33,6 @@ function App() {
             <Route element={<GamerCard stats={stats}/>}/>
             <Route path="/onboard" element={<Onboard getStats={(stats)=>setStats(stats)}/>}/>
           </Routes>
-          </Box>
           <Footer/>
         </Grid>
       </Grid>

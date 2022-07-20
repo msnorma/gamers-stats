@@ -1,25 +1,25 @@
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import SportsEsportsRoundedIcon from '@mui/icons-material/SportsEsportsRounded';
-import ArticleRoundedIcon from '@mui/icons-material/ArticleRounded';
-import QuizRoundedIcon from '@mui/icons-material/QuizRounded';
+import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
+import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
 const NavBarList = [
   {
-    icon: <HomeRoundedIcon />,
+    icon: <HomeRoundedIcon fontSize="small" />,
     name: 'Home',
     route: '/'
   },{
-    icon: <SportsEsportsRoundedIcon/>,
+    icon: <SportsEsportsOutlinedIcon fontSize="small"/>,
     name: 'Community',
     route: '/community'
   },
   {
-    icon: <ArticleRoundedIcon/>,
+    icon: <FeedOutlinedIcon fontSize="small"/>,
     name: 'News',
     route: '/news'
   },
   {
-    icon: <QuizRoundedIcon/>,
+    icon: <HelpOutlineOutlinedIcon fontSize="small"/>,
     name: 'FAQ',
     route: '/faq'
   },
