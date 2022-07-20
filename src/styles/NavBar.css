@@ -5,4 +5,11 @@
 
 .nav-link:hover{
   color: #fff;
+  /* background-color:#3E4451; */
+}
+
+.nav-item:hover{
+  border-radius: 15px;
+  margin: 0px 10px 0px 10px;
+  background-color: #3E4451;
 }

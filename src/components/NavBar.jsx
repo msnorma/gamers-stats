@@ -1,24 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import NavBarList from './NavBarList';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 import '../styles/NavBar.css';
 
 function NavBar(){
-
+ 
   return(
-    <div style={{float: 'left', height: '100vh', width: '40vh', backgroundColor: '#1E1F20'}}>
-      <ul style={{listStyle:'none'}}>
+    <div style={{width: '100%'}}>
+      <Box sx={{ width: '100%', bgcolor: '#1f1f1f' }}>
+        <Tabs indicatorColor="primary" sx={{padding:'0px'}} centered>
         {
-          NavBarList.map((item, index)=> {
-          return (
-            <li key={index} className="nav-item">
-              <Link to={item.route} className="nav-link">
-                <span>{item.name}</span>
-              </Link>
-            </li>
-          );})
-        }
-      </ul>
+          NavBarList.map((item, index) => (
+            <Tab
+              label={<span style={{color:'#474747'}}>{item.name}</span>}
+              id={`simple-tab-${index}`}
+              key={item.name}
+              // iconPosition="start"
+              // icon={<span style={{color:'#fff'}}>{item.icon}</span>}
+              component={Link}
+              to={item.route}
+            />
+        ))}
+        </Tabs>
+      </Box>
     </div>
   )
 }

@@ -1,55 +1,63 @@
 import React, {useState} from 'react';
-import {Card, Navbar, Container, Nav} from 'react-bootstrap';
-import gameImage from "../assets/fortnite-banner.jpeg";
+// import {Link} from 'react-router-dom';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import {TabList} from '@mui/lab';
+import TabPanel from '@mui/lab/TabPanel';
+import TabContext from '@mui/lab/TabContext';
 import Challenge from "./Challenges";
-import Filter from "../components/List";
+import EventList from "../components/List";
 import Tournaments from "./Tournaments";
 import Stats from "./Stats";
 import "../styles/Community.css";
+import gameCard from "../assets/fortnite.jpeg";
+import '../styles/Card.css';
 
 function Community({stats}) {
 
-  const [state, setState]=useState("");
+  const [state, setState]=useState('0');
 
-   const handleOnclick = (value) => {
+   const handleOnclick = (e, value) => {
+    e.preventDefault();
     setState(value);
+    console.log(state)
   }
 
   return (
-    <div className="container-content">
-      <Card className="text-white">
-        <Card.Img className="card-image" src={gameImage} alt="Card image" />
-        <Card.ImgOverlay>
-          <Card.Title></Card.Title>
-          <Card.Text>
-            
-          </Card.Text>
-          <Card.Text></Card.Text>
-        </Card.ImgOverlay>
+    <div className="container-community">
+      <Card sx={{ width: '100%', height: '40vh', borderRadius: '15px', backgroundColor: '#596173'}}>
+          <CardMedia
+            component="img"
+            image={gameCard}
+            alt="fortnite"
+          />
       </Card>
-
+     
       <div style={{marginTop: '20px', marginRight: '20px', marginLeft: '20px'}}>
-        <Navbar bg="light" variant="light" style={{borderRadius: '20px'}}>
-          <Container>
-            <Nav className="" style={{margin: 'auto'}}>
-            {
-              Filter.map((item, index)=> {
-              return (
-                <Nav.Link key={index} className="nav-item" onClick={() => handleOnclick(item.name)} value={item.name}>
-                  <span>{item.name}</span>
-                </Nav.Link>
-              );})
-            }
-            </Nav>
-          </Container>
-        </Navbar>
-      </div>
-
-      <div>
-        {state === 'Challenges' && <Challenge/>}
-        {state === 'Stats' && <Stats stats={stats}/>}
-        {state === 'Tournaments' && <Tournaments/>}
-      </div>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <TabContext value={state}>
+          <TabList onChange={handleOnclick} aria-label="basic tabs example" centered>
+          {
+            EventList.map((item, index) => (
+              <Tab
+                label={<span style={{color:'#fff'}}>{item.name}</span>}
+                id={`simple-tab-${index}`}
+                key={item.name}
+                value={index}
+              />
+          ))}
+          </TabList>
+        
+        {
+          EventList.map((item, index) => (
+          <TabPanel key={item.name} value={item.index}>{item.name}</TabPanel>
+          ))}
+        
+      </TabContext>
+      </Box>
+    </div>
     </div>
   );
 }

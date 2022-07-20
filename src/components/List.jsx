@@ -1,11 +1,14 @@
 const Filter = [
   {
-    name: 'Challenges'
+    name: 'Challenges',
+    index: '0'
   },{
-    name: 'Stats'
+    name: 'Stats',
+    index: '1'
   },
   {
-    name: 'Tournaments'
+    name: 'Tournaments',
+    index: '2'
   }
 ]
 

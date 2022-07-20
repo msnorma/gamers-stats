@@ -1,6 +1,6 @@
 import React from "react";
 import '../styles/Stats.css';
-import avi from '../assets/black.png';
+// import avi from '../assets/black.png';
 
 function GamerCard(props){
 
@@ -10,7 +10,7 @@ function GamerCard(props){
         <div className="card-body">
           <div className="row align-items-center">
             <div className="col-1">
-              <img src={avi} alt="anime" className="profile-image rounded-circle"/>
+              <img src="" alt="anime" className="profile-image rounded-circle"/>
             </div>
             <div className="col-5">
               <h4 className="card-text">{props.fortniteStats.name}</h4>
