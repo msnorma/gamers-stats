@@ -1,0 +1,17 @@
+.container-signup {
+  margin: 40px 50px 0px 50px;
+}
+
+.container-news {
+  margin: 50px 100px 0px 100px;
+  width: 100%;
+}
+
+.news-card {
+  height: 40vh;
+}
+
+.container-community {
+  width: 100%;
+  margin: 50px 100px;
+}
