@@ -1,0 +1,12 @@
+.title-about{
+  text-align: center;
+  margin-top: 150px !important;
+  font-weight: 600 !important;
+  background: -webkit-linear-gradient(#94bbe9, #eeaeca);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-about-description{
+  text-align: center;
+}

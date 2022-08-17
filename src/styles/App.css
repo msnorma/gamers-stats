@@ -1,5 +1,5 @@
 body {
-  background-color: #1C1C21;
+  background-color: #101518;
 }
 
 .App {
@@ -35,6 +35,11 @@ body {
 .container-footer {
   position: absolute;
   bottom: 0;
+}
+
+.container-about{
+  margin: auto;
+  width: 50%;
 }
 
 h3 {
