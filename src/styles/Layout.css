@@ -1,0 +1,20 @@
+.col-1-dashboard{
+  display: block;
+}
+
+.col-2-dashboard{
+  display: block;
+}
+
+.row-1-community{
+  display: flex;
+}
+
+.row-card-catergories{
+  margin-right: 40px;
+  display: flex;
+}
+
+.MuiPaper-root{
+  margin-top: 0px;
+}

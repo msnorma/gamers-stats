@@ -1,6 +1,4 @@
-.container-signup {
-  margin: 40px 50px 0px 50px;
-}
+
 
 .container-news {
   margin: 50px 100px 0px 100px;
@@ -11,7 +9,65 @@
   height: 40vh;
 }
 
-.container-community {
+.card-dashboard{
+  background-color: #fff !important;
   width: 100%;
-  margin: 50px 100px;
+  box-shadow: none !important;
+  height: 35vh;
+  margin-bottom: 20px;
+}
+
+.card-profile-dashboard{
+  background-color: #fff !important;
+  width: 100%;
+  box-shadow: none !important;
+  height: 50vh;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.card-right-dashboard{
+  width: 100%;
+  box-shadow: none !important;
+  height: 30vh;
+  margin-right: 20px;
+}
+
+.card-info-dashboard{
+  width: 100%;
+  box-shadow: none !important;
+  height: 44vh;
+  margin-right: 20px;
+}
+
+.card-categories-community{
+  width: 100%;
+  box-shadow: none !important;
+  height: 30vh;
+  margin:20px;
+}
+
+.card-tournaments-community{
+  width: 100%;
+  box-shadow: none !important;
+  height: 40vh;
+  margin:20px;
+}
+
+.card-home{
+  background-color: #fff !important;
+  /* margin-top: 80px; */
+  width: 100%;
+  box-shadow: none !important;
+  height: 35vh;
+}
+
+.card-img-home{
+  height: 35vh;
+}
+
+.sm-card-img-home{
+  background-color: #fff !important;
+  box-shadow: none !important;
+  height: 30vh;
 }

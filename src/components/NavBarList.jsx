@@ -7,7 +7,7 @@ const NavBarList = [
   {
     icon: <HomeRoundedIcon fontSize="small" />,
     name: 'Home',
-    route: '/'
+    route: '/gamers-dashboard'
   },{
     icon: <SportsEsportsOutlinedIcon fontSize="small"/>,
     name: 'Community',

@@ -7,49 +7,11 @@
   position: relative;
 } */
 
-.container-home{
-  margin: auto;
-  width: 50%;
-  margin-top: 10px;
-}
-
-.btn-login{
-  color: #66ccc0 !important;
-  border-radius: 15px !important;
-  box-shadow: none !important;
-  margin: 20px !important;
-  width: 110px;
-}
-
-.btn-login:hover{
-  background-color: #66ccc0 !important;
-  color:#010402 !important;
-  border-radius: 15px;
-  box-shadow: none;
-}
-
 .tabs:hover{
   color: #010402;
-}
-
-.card-home{
-  background-color: #212b31 !important;
-  /* margin-top: 80px; */
-  width: 100%;
-  box-shadow: none;
-  height: 35vh;
-}
-
-.card-img-home{
-  height: 35vh;
-  box-shadow: none;
 }
 
 .grid-home {
   margin-top: 50px !important;
 }
 
-.sm-card-img{
-  background-color: #212b31 !important;
-  height: 30vh;
-}

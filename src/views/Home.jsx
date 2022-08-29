@@ -4,22 +4,17 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import '../styles/Home.css';
+import '../styles/App.css';
+import '../styles/Typography.css';
+import '../styles/Card.css';
 
 function Home() {
   return (
     <div className="container-home">
-
-      <Card className="card-home">
-        <CardActionArea disableRipple>
-          <CardMedia
-            className="card-img-home"
-            component="img"
-            image={{}}
-            alt="home"
-          />
-        </CardActionArea>
-      </Card>
+     <Typography className="title-home" variant="h2" gutterBottom>
+        Say what we do.
+    </Typography>
+    <h5 className="title-home-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
 
     <Grid className="grid-home" container spacing={2}>
       <Grid item xs={3}>
@@ -28,10 +23,9 @@ function Home() {
         </Typography>
       </Grid>
       <Grid item xs={3}>
-        <Card>
+        <Card className="sm-card-img-home">
           <CardActionArea disableRipple>
             <CardMedia
-              className="sm-card-img"
               component="img"
               image={{}}
               alt="home"
@@ -40,10 +34,9 @@ function Home() {
         </Card>
       </Grid>
       <Grid item xs={3}>
-        <Card>
+        <Card className="sm-card-img-home">
           <CardActionArea disableRipple>
             <CardMedia
-              className="sm-card-img"
               component="img"
               image={{}}
               alt="home"
@@ -52,10 +45,9 @@ function Home() {
         </Card>
       </Grid>
       <Grid item xs={3}>
-        <Card>
+        <Card className="sm-card-img-home">
           <CardActionArea disableRipple>
             <CardMedia
-              className="sm-card-img"
               component="img"
               image={{}}
               alt="home"
