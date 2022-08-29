@@ -1,63 +1,89 @@
-import React, {useState} from 'react';
-// import {Link} from 'react-router-dom';
+import React from 'react';
+import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import {TabList} from '@mui/lab';
-import TabPanel from '@mui/lab/TabPanel';
-import TabContext from '@mui/lab/TabContext';
-import Challenge from "./Challenges";
-import EventList from "../components/List";
-import Tournaments from "./Tournaments";
-import Stats from "./Stats";
-import "../styles/Community.css";
-import gameCard from "../assets/fortnite.jpeg";
+import { CardActionArea } from '@mui/material';
+import CardProfile from '../components/CardProfile';
+import CardBadge from '../components/CardBadge';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import '../styles/Card.css';
+import '../styles/App.css';
 
 function Community({stats}) {
 
-  const [state, setState]=useState('0');
+  // const [state, setState]=useState('0');
 
-   const handleOnclick = (e, value) => {
-    e.preventDefault();
-    setState(value);
-    console.log(state)
-  }
+  //  const handleOnclick = (e, value) => {
+  //   e.preventDefault();
+  //   setState(value);
+  //   console.log(state)
+  // }
+  
 
   return (
     <div className="container-community">
-      <Card sx={{ width: '100%', height: '40vh', borderRadius: '15px', backgroundColor: '#596173'}}>
-          <CardMedia
-            component="img"
-            image={gameCard}
-            alt="fortnite"
-          />
-      </Card>
-     
-      <div style={{marginTop: '20px', marginRight: '20px', marginLeft: '20px'}}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <TabContext value={state}>
-          <TabList onChange={handleOnclick} aria-label="basic tabs example" centered>
-          {
-            EventList.map((item, index) => (
-              <Tab
-                label={<span style={{color:'#fff'}}>{item.name}</span>}
-                id={`simple-tab-${index}`}
-                key={item.name}
-                value={index}
-              />
-          ))}
-          </TabList>
-        
-        {
-          EventList.map((item, index) => (
-          <TabPanel key={item.name} value={item.index}>{item.name}</TabPanel>
-          ))}
-        
-      </TabContext>
-      </Box>
-    </div>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={3}>
+          <CardProfile/>
+          <CardBadge/>
+        </Grid>
+        <Grid className="col-2-dashboard" item xs={9}>
+          <div className="row-card-catergories">
+            <Card className="card-categories-community">
+              <CardActionArea disableRipple>
+                <CardMedia
+                  className="card-img-home"
+                  component="img"
+                  image={{}}
+                  alt="home"
+                />
+              </CardActionArea>
+            </Card>
+            <Card className="card-categories-community">
+              <CardActionArea disableRipple>
+                <CardMedia
+                  className="card-img-home"
+                  component="img"
+                  image={{}}
+                  alt="home"
+                />
+              </CardActionArea>
+            </Card>
+            <Card className="card-categories-community">
+              <CardActionArea disableRipple>
+                <CardMedia
+                  className="card-img-home"
+                  component="img"
+                  image={{}}
+                  alt="home"
+                />
+              </CardActionArea>
+            </Card>
+          </div>
+          <Stack className="community-button-toggle-group" spacing={2} direction="row">
+          <Button className="btn-community" variant="outlined" color="secondary" size="small" disableRipple>
+          Tournaments
+          </Button>
+          <Button className="btn-community" variant="outlined" color="secondary" size="medium" disableRipple>
+          Challenges
+          </Button>
+          </Stack>
+          <div className="row-card-catergories">
+            <Card className="card-tournaments-community">
+              <CardActionArea disableRipple>
+                <CardMedia
+                  className="card-img-home"
+                  component="img"
+                  image={{}}
+                  alt="home"
+                />
+              </CardActionArea>
+            </Card>
+          </div>
+        </Grid>
+
+      </Grid>
     </div>
   );
 }

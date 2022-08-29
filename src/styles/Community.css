@@ -9,3 +9,6 @@
   border-radius: 20px;
 }
 
+.tab-community:focus{
+  outline:none;
+}

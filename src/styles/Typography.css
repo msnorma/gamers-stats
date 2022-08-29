@@ -1,0 +1,57 @@
+.title-home{
+  text-align: center;
+  margin-top: 100px !important;
+  font-weight: 600 !important;
+  background: -webkit-linear-gradient(#94bbe9, #eeaeca);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-home-description{
+  text-align: center;
+  margin-bottom: 100px;
+  color:#8F8F8F;
+}
+
+.title-faq {
+  text-align: center;
+  font-weight: 600 !important;
+  background: -webkit-linear-gradient(#94bbe9, #eeaeca);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-description{
+  text-align: center;
+  color:#8F8F8F;
+}
+
+.form-input{
+  outline: none;
+}
+
+.MuiInputLabel-root{
+  color: #8F8F8F !important;
+  border-bottom: #A4ADC5;
+  font-size: .8rem !important;
+}
+
+.MuiTextField-root::after{
+  border-bottom: 1px solid #eeaeca !important;
+}
+
+.outlinedInputClasses.input:hover{
+  border-bottom: 2px solid #8F8F8F !important;
+}
+
+.MuiInput-underline::after{
+  border-bottom: 1px solid #8F8F8F !important;
+}
+
+.MuiInput-underline:hover{
+  border-color: #8F8F8F;
+}
+
+.fieldset:hover {
+  border-color: transparent !important;
+}
