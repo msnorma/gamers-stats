@@ -1,25 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import CardProfile from '../components/CardProfile';
 import CardBadge from '../components/CardBadge';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+
+import GamerCard from '../components/GamerCard';
+
+import battle from '../assets/battle.png';
+import sports from '../assets/fifa.png';
 import '../styles/Card.css';
 import '../styles/App.css';
 
 function Community({stats}) {
-
-  // const [state, setState]=useState('0');
-
-  //  const handleOnclick = (e, value) => {
-  //   e.preventDefault();
-  //   setState(value);
-  //   console.log(state)
-  // }
   
+  const [categories, setCategories]=useState("");
+
+  const changeCategory = (e,value) => {
+    setCategories(value);
+    console.log(value)
+  } 
 
   return (
     <div className="container-community">
@@ -30,36 +35,34 @@ function Community({stats}) {
         </Grid>
         <Grid className="col-2-dashboard" item xs={9}>
           <div className="row-card-catergories">
-            <Card className="card-categories-community">
-              <CardActionArea disableRipple>
-                <CardMedia
-                  className="card-img-home"
+          <Card className="card-categories-community">
+            <CardActionArea style={{outline: 'none'}} value={categories} onClick={e=>changeCategory(e,"Battle Royale")} disableRipple>
+            <CardMedia
+                style={{margin: 'auto', width: '50%', padding: '20px'}}
+                component="img"
+                height="194"
+                image={battle}
+                alt="Paella dish"
+              />
+              <Typography style={{textAlign: 'center'}} gutterBottom variant="subtitle1" component="div">
+                Battle Royale
+              </Typography>
+            </CardActionArea>
+          </Card>
+          <Card className="card-categories-community">
+            <CardActionArea style={{outline: 'none'}} value={categories} onClick={e=>changeCategory(e,"Sports")} disableRipple>
+              <CardMedia
+                  style={{margin: 'auto', width: '50%'}}
                   component="img"
-                  image={{}}
-                  alt="home"
-                />
-              </CardActionArea>
-            </Card>
-            <Card className="card-categories-community">
-              <CardActionArea disableRipple>
-                <CardMedia
-                  className="card-img-home"
-                  component="img"
-                  image={{}}
-                  alt="home"
-                />
-              </CardActionArea>
-            </Card>
-            <Card className="card-categories-community">
-              <CardActionArea disableRipple>
-                <CardMedia
-                  className="card-img-home"
-                  component="img"
-                  image={{}}
-                  alt="home"
-                />
-              </CardActionArea>
-            </Card>
+                  height="194"
+                  image={sports}
+                  alt="Paella dish"
+              />
+              <Typography style={{textAlign: 'center'}} gutterBottom variant="subtitle1" component="div">
+                Sports
+              </Typography>
+            </CardActionArea>
+          </Card>
           </div>
           <Stack className="community-button-toggle-group" spacing={2} direction="row">
           <Button className="btn-community" variant="outlined" color="secondary" size="small" disableRipple>
@@ -69,18 +72,23 @@ function Community({stats}) {
           Challenges
           </Button>
           </Stack>
+          { categories === "Sports" ? 
           <div className="row-card-catergories">
             <Card className="card-tournaments-community">
+              <CardContent>
+                <Typography gutterBottom variant="subtitle1" component="div">
+                  Sports
+                </Typography>
+              </CardContent>
               <CardActionArea disableRipple>
-                <CardMedia
-                  className="card-img-home"
-                  component="img"
-                  image={{}}
-                  alt="home"
-                />
               </CardActionArea>
             </Card>
           </div>
+          :
+          <div className="row-card-catergories">
+            <GamerCard fortniteStats={stats}/>
+          </div>
+          }
         </Grid>
 
       </Grid>
