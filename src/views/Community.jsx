@@ -23,7 +23,8 @@ function Community({stats}) {
 
   const changeCategory = (e,value) => {
     setCategories(value);
-    console.log(value)
+    // TODO: fix invalid value provided on render
+    console.log(categories)
   } 
 
   return (
