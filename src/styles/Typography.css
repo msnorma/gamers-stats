@@ -1,3 +1,18 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profile-descrption-typography{
+  margin-bottom: 20px;
+  margin-top: 40px;
+  color: #8F8F8F;
+}
+
+.login-typography{
+ color: #8F8F8F;
+ float: left;
+}
+
 .title-home{
   text-align: center;
   margin-top: 100px !important;

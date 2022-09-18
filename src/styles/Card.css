@@ -15,8 +15,18 @@
   box-shadow: none !important;
   height: 35vh;
   margin-bottom: 20px;
+  margin-left: 20px;
 }
 
+/* Stats Card */
+
+.stats-card {
+  width: 100%;
+  margin: 0 auto;
+  margin: 20px;
+}
+
+/* User Profile Card */
 .card-profile-dashboard{
   background-color: #fff !important;
   width: 100%;
@@ -24,6 +34,18 @@
   height: 50vh;
   margin-right: 20px;
   margin-bottom: 15px;
+}
+
+.profile-picture {
+  margin: auto;
+  margin-top: 30px;
+  height: 100px !important;
+  width: 100px !important;
+}
+
+.profile-description {
+  text-align: center;
+  justify-content: center !important;
 }
 
 .card-right-dashboard{
@@ -38,12 +60,12 @@
   box-shadow: none !important;
   height: 44vh;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 .card-categories-community{
   width: 100%;
   box-shadow: none !important;
-  height: 30vh;
   margin:20px;
 }
 
