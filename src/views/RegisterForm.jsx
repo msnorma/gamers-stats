@@ -36,6 +36,10 @@ const RegisterForm = ({setLogin}) => {
     setLogin(true);
     navigate('/gamers-dashboard')
   }
+
+  const handleLogin = () => {
+    setLogin(true)
+  }
   
   return (
     <div className="container-signup">
@@ -66,12 +70,9 @@ const RegisterForm = ({setLogin}) => {
       autoComplete="off"
     >
       <div style={{margin:'auto', width: '80%'}}>
-        <Typography variant="h5" gutterBottom component="div" align='left' marginTop={5} color={'#8F8F8F'}>
-          Lorem ipsum dolor sit, adipiscing.
-        </Typography>
-        <Typography variant="caption" gutterBottom component="div" align='left' marginTop={1} color={'#8F8F8F'}>
-          Lorem ipsum dolor sit, adipiscing.
-        </Typography>
+        <h5 float="left">Lorem ipsum dolor sit, adipiscing.</h5>
+        <small className="login-typography" gutterBottom>Already a member?</small>
+        <a href={handleLogin} color='blue'>Login</a>
         <TextField
           label="Profile name"
           width="100%"
@@ -95,7 +96,7 @@ const RegisterForm = ({setLogin}) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button className="button__form" ariant="contained" type="submit" onClick={handleOnSubmit} >Onboard</Button>
+        <Button className="button__form" ariant="contained" type="submit" onClick={handleOnSubmit} >Sign up</Button>
         <Typography variant="caption" display="block" sx={{marginTop: '15px', textAlign:'left', color:'#A4ADC5'}}>By sigining up you are agreeing to our Terms and Conditions</Typography>
       </div>
     </Box>
