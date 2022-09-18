@@ -9,6 +9,7 @@ import Divider from '@mui/material/Divider';
 import '../styles/App.css';
 import '../styles/Card.css';
 import '../styles/Layout.css';
+import '../styles/Typography.css';
 
 const CardProfile=()=>{
   return(
@@ -18,27 +19,25 @@ const CardProfile=()=>{
             <Avatar className="profile-picture" alt="User" src="/static/images/avatar/1.jpg" />
           </Stack>
           <CardContent className="profile-description">
-            <Typography gutterBottom variant="h6" component="div">
-              Username
-            </Typography>
-            <Stack style={{justifyContent:'center', marginTop: '20px'}} direction="row" spacing={4}>
+          <h6 gutterBottom>Username</h6>
+            <Stack style={{justifyContent:'center', marginTop: '20px', marginBottom:'30px'}} direction="row" spacing={4}>
               <Stack style={{justifyContent:'center'}} direction="column" spacing={1}>
                 <Typography variant="h6">2</Typography>
-                <Typography variant="caption" display="block" gutterBottom>Ranking</Typography>
+                <small gutterBottom>Ranking</small>
               </Stack>
               <Stack style={{justifyContent:'center'}} direction="column" spacing={1}>
                 <Typography variant="h6">2</Typography>
-                <Typography variant="caption" display="block" gutterBottom>Level</Typography>
+                <small gutterBottom>Level</small>
               </Stack>
               <Stack style={{justifyContent:'center'}} direction="column" spacing={1}>
                 <Typography variant="h6">2</Typography>
-                <Typography variant="caption" display="block" gutterBottom>Wins</Typography>
+                <small gutterBottom>Wins</small>
               </Stack>
             </Stack>
-            <Typography style={{marginBottom: '20px', marginTop: '40px'}} variant="body2" color="text.secondary">
+            <small className="profile-descrption-typography" >
               Users about description.
-            </Typography>
-            <Divider />
+            </small>
+            <Divider style={{ marginTop:'20px'}}/>
           </CardContent>
           <CardActions>
             <Typography style={{margin: 'auto', color:'#8F8F8F'}} variant="caption" display="block" gutterBottom>
