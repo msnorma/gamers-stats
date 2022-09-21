@@ -1,3 +1,6 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 .btn-login{
   color: #B255DD !important;
   /* color: -webkit-linear-gradient(#94bbe9, #eeaeca); */
@@ -6,6 +9,7 @@
   margin: 20px !important;
   width: 90px;
   font-size: 12px !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .btn-login:hover{
@@ -26,6 +30,7 @@
   color:#fff !important;
   padding: 12px !important;
   background-color:#b255dd !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .button__form:hover{
