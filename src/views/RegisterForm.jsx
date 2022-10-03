@@ -94,12 +94,13 @@ const RegisterForm = ({setLogin}) => {
         '& > :not(style)': { m: 1, width: '25ch' },
         height: 520,
         width: 450,
-        backgroundColor: '#fff',
+        backgroundColor: 'transparent',
         borderRadius: 5,
         padding: 1,
         textAlign: 'center',
         float: 'right',
-        marginTop: 6,
+        marginTop: 15,
+        border: '1px solid grey',
       }}
       noValidate
       autoComplete="off"

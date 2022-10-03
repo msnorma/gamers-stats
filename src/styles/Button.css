@@ -1,12 +1,17 @@
 *{
   font-family: 'Montserrat', sans-serif;
 }
+
+.btn-container{
+  margin-left: auto;
+}
+
 .btn-login{
-  color: #B255DD !important;
+  background-color: #B255DD !important;
+  color:#fff !important;
   /* color: -webkit-linear-gradient(#94bbe9, #eeaeca); */
   border-radius: 15px !important;
   box-shadow: none !important;
-  margin: 20px !important;
   width: 90px;
   font-size: 12px !important;
   font-family: 'Montserrat', sans-serif !important;
@@ -38,7 +43,7 @@
 }
 
 .community-button-toggle-group{
-  margin: 20px;
+  margin: 20px 0px;
 }
 
 .community-button-toggle{
@@ -47,7 +52,7 @@
 }
 
 .btn-community{
-  color: #B255DD !important;
+  background-color: #688fff !important;
   border-radius: 15px !important;
   box-shadow: none !important;
   width: 90px;

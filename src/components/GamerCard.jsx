@@ -6,7 +6,7 @@ function GamerCard(props){
 
   return (
     <div className="stats-card">
-      <div className="card" style={{border: 'none'}}>
+      <div className="card" style={{border: 'none', backgroundColor: '#2D325A'}}>
         <div className="card-body">
           <div className="row align-items-center">
             <div className="col-1">
