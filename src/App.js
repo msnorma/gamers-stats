@@ -3,15 +3,16 @@ import React, {useState}  from 'react';
 import Home from './views/Home';
 import Onboard from './views/Onboard';
 import GamerCard from './components/GamerCard';
-import NavBar from './components/NavBar';
+import SecondNav from './components/SecondNavbar';
 import Faq from './views/Faq';
-import Footer from './components/Footer';
+import DashboardFooter from './components/DashboardFooter';
+import HomeFooter from './components/HomeFooter';
 import UserNotFound from './views/UserNorFound';
 import Community from './views/Community';
 import News from './views/News';
 import RegisterForm from './views/RegisterForm';
 import './styles/App.css';
-import DashboardNav from './components/DashboardNav';
+import FirstNav from './components/FirstNavbar';
 import Dashboard from './views/Dashboard';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
     <div className="app-container">
     {isLoggedIn ? 
       <div>
-        <NavBar setLogin={(isLoggedIn) => setLogin(isLoggedIn)}/>
+        <SecondNav setLogin={(isLoggedIn) => setLogin(isLoggedIn)}/>
         <Routes>
           <Route path="/gamers-dashboard" element={<Dashboard/>}/>
           <Route path="/community" element={<Community stats={stats}/>}/>
@@ -33,17 +34,18 @@ function App() {
           <Route element={<GamerCard stats={stats}/>}/>
           <Route path="/onboard" element={<Onboard getStats={(stats)=>setStats(stats)}/>}/>
         </Routes>
-        <Footer/>
+        <DashboardFooter/>
       </div>
       :
        <div>
-       <DashboardNav />
+       <FirstNav />
        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/faq" element={<Faq />}/>
-          <Route path="/register" element={<RegisterForm setLogin={(isLoggedIn) => setLogin(isLoggedIn)} />} />
-        </Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/faq" element={<Faq />}/>
+        <Route path="/register" element={<RegisterForm setLogin={(isLoggedIn) => setLogin(isLoggedIn)} />} />
+      </Routes>
+      <HomeFooter/>
        </div>
     }
     </div>

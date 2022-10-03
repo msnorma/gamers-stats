@@ -14,8 +14,6 @@
   width: 100%;
   box-shadow: none !important;
   height: 35vh;
-  margin-bottom: 20px;
-  margin-left: 20px;
 }
 
 /* Stats Card */
@@ -23,12 +21,12 @@
 .stats-card {
   width: 100%;
   margin: 0 auto;
-  margin: 20px;
+  background-color: #0c223d !important;
 }
 
 /* User Profile Card */
 .card-profile-dashboard{
-  background-color: #fff !important;
+  background-color: #2D325A !important;
   width: 100%;
   box-shadow: none !important;
   height: 50vh;
@@ -36,11 +34,20 @@
   margin-bottom: 15px;
 }
 
+.ranking-box{
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #373D6D;
+  color: #fff;
+}
+
 .profile-picture {
   margin: auto;
   margin-top: 30px;
-  height: 100px !important;
-  width: 100px !important;
+  height: 80px !important;
+  width: 80px !important;
 }
 
 .profile-description {
@@ -48,11 +55,12 @@
   justify-content: center !important;
 }
 
-.card-right-dashboard{
+.card-badge-dashboard{
   width: 100%;
   box-shadow: none !important;
-  height: 30vh;
+  height: 25vh;
   margin-right: 20px;
+  background-color: #2D325A !important;
 }
 
 .card-info-dashboard{
@@ -66,14 +74,15 @@
 .card-categories-community{
   width: 100%;
   box-shadow: none !important;
-  margin:20px;
+  background: rgb(243,158,121);
+  background: linear-gradient(90deg, rgba(243,158,121,1) 0%, rgba(249,206,120,1) 35%, rgba(235,88,129,1) 150%);
 }
 
 .card-tournaments-community{
   width: 100%;
   box-shadow: none !important;
   height: 40vh;
-  margin:20px;
+  background-color: #2D325A !important;
 }
 
 .card-home{
@@ -86,6 +95,7 @@
 
 .card-img-home{
   height: 35vh;
+  object-fit: unset;
 }
 
 .sm-card-img-home{
@@ -93,3 +103,16 @@
   box-shadow: none !important;
   height: 30vh;
 }
+
+.glass-box {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+}
+
+/* .MuiTableCell-root {
+  border-bottom: none;
+} */

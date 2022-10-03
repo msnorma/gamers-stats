@@ -2,15 +2,42 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.profile-descrption-typography{
-  margin-bottom: 20px;
-  margin-top: 40px;
+/* Profile Card */
+
+.username-typography{
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.rankings-typography{
   color: #8F8F8F;
+}
+
+.rankings-count-typography{
+  text-align: center;
+  font-weight: 800;
+  background: -webkit-linear-gradient(#94bbe9, #eeaeca);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile-descrption-typography{
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  color: #8F8F8F;
+  font-size: small;
+}
+
+.registartion-typography{
+  float: left;
 }
 
 .login-typography{
  color: #8F8F8F;
- float: left;
+ /* float: left; */
 }
 
 .title-home{
@@ -39,10 +66,32 @@
 .title-description{
   text-align: center;
   color:#8F8F8F;
+  margin-bottom: 50px;
 }
 
 .form-input{
   outline: none;
+}
+
+.__form-heading{
+  color: #8F8F8F;
+  margin-top: 40px !important;
+}
+
+.__form-inputs{
+  color: #8F8F8F;
+  background-color: #2D325A;
+  border-radius: 10px;
+  margin-top: 40px !important;
+  width: 100%;
+}
+
+.__form-inputs-2{
+  color: #8F8F8F;
+  background-color: #2D325A;
+  border-radius: 10px;
+  margin-top: 20px !important;
+  width: 100%;
 }
 
 .MuiInputLabel-root{
@@ -69,4 +118,10 @@
 
 .fieldset:hover {
   border-color: transparent !important;
+}
+
+.cartegory-text{
+  text-align: center;
+  color: white;
+  font-size: xxx-large;
 }

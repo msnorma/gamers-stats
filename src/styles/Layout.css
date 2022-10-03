@@ -11,10 +11,31 @@
 }
 
 .row-card-catergories{
-  margin-right: 40px;
   display: flex;
 }
 
 .MuiPaper-root{
   margin-top: 0px;
+}
+
+.table-header-cell-row {
+  border-bottom: 5px solid #25294A !important;
+  background-color: #2D325A !important;
+  color: #8F8F8F !important;
+  font-weight: 600 !important;
+}
+
+.table-header-row {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.table-cell-row{
+  border-bottom: 1px solid #30355F !important;
+  color: #8F8F8F !important;
+}
+
+.MuiTable-root{
+  border-collapse: separate;
+  border-spacing: 0 10px !important;
+  margin-top: -10px;
 }

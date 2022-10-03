@@ -15,5 +15,26 @@
 }
 
 .container-nav {
-  background-color: #fff;
+  background-color: #2D325A;
+}
+
+.nav__list{
+  list-style-type: none;
+  display: flex;
+  padding: 20px;
+  margin: 0px auto;
+  width: 90%;
+}
+
+.nav__list-item a{
+  color: #ddd;
+  text-decoration: none;
+	margin-top: 85px;
+	list-style-type: none;
+  margin-right: 50px;
+}
+
+.nav__box{
+  width: 80%;
+  margin: 0px auto;
 }

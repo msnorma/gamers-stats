@@ -11,30 +11,39 @@ import '../styles/App.css';
 const ScrollableFeed = () => {
 
   return (
-    <List sx={{ width: '100%', marginTop: '20px',bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', marginTop: '20px',bgcolor: 'transparent' }}>
+      <Divider sx={{backgroundColor:'#30355F'}} variant="inset" component="li" />
       <ListItem alignItems="flex-start" sx={{padding: '20px'}}>
         <ListItemAvatar>
           <Avatar className="post-image" variant="square" alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Fortnite Launch"
+          primary={
+              <Typography
+                sx={{ display: 'inline' }}
+                component="span"
+                variant="body1"
+                color="#ccc"
+              >
+                Platform Launch
+              </Typography>
+          }
           secondary={
             <React.Fragment>
               <Typography
                 sx={{ display: 'inline' }}
                 component="span"
                 variant="body2"
-                color="text.primary"
+                color="#cccccc"
               >
                 Battle Pass
               </Typography>
-              {" — Some content over here about the launch"}
             </React.Fragment>
           }
         />
       
       </ListItem>
-      <Divider variant="inset" component="li" />
+      <Divider sx={{backgroundColor:'#30355F'}} variant="inset" component="li" />
     </List>
   );
 

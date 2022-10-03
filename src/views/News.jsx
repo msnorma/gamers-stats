@@ -4,6 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import ScrollableFeed from '../components/ScrollableFeed.jsx';
+import homePicture1 from '../assets/homePicture1.png';
 import "../styles/Card.css";
 import "../styles/Home.css";
 
@@ -16,8 +17,7 @@ function News() {
         <Card className="card-home">
           <CardMedia
             component="img"
-            height="140"
-            image={{}}
+            image={homePicture1}
             alt="news"
           />
         </Card>
@@ -26,8 +26,7 @@ function News() {
         <Card className="card-home">
           <CardMedia
             component="img"
-            height="140"
-            image={{}}
+            image={homePicture1}
             alt="news"
           />
         </Card>

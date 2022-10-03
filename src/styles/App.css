@@ -1,5 +1,5 @@
 body {
-  background-color: #F9F9F9;
+  background-color: #25294A;
 }
 
 .App {
@@ -36,8 +36,7 @@ body {
 
 .container-home{
   margin: 0px auto;
-  /* margin: 50px 150px; */
-  width: 80%;
+  width: 90%;
   margin-top: 50px;
 }
 
@@ -65,22 +64,20 @@ body {
 
 .container-dashboard {
   margin: 0px auto;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 30px;
+  width: 90%;
+  margin-top: 50px;
   display: flex;
 }
 
 .container-community {
-  width: 100%;
+  width: 90%;
   margin: 0px auto;
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .container-faq {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .search-bar{
@@ -96,6 +93,10 @@ body {
   width: 56px !important;
   height: 56px !important;
   margin-right: 10px;
+}
+
+.badges-img{
+  width: 100%
 }
 
 h3 {
