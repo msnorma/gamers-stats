@@ -62,3 +62,18 @@
 .btn-community:focus{
   outline: none;
 }
+
+.btn-tab {
+  color: #8F8F8F !important;
+  padding-left: 0px !important;
+  font-size: small !important;
+}
+
+.btn-tab:focus{
+  color: #b255dd !important;
+  font-weight: 600;
+}
+
+.MuiButtonBase-root{
+  color: #fff;
+}

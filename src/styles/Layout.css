@@ -21,12 +21,8 @@
 .table-header-cell-row {
   border-bottom: 5px solid #25294A !important;
   background-color: #2D325A !important;
-  color: #8F8F8F !important;
+  color: #ccc !important;
   font-weight: 600 !important;
-}
-
-.table-header-row {
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .table-cell-row{

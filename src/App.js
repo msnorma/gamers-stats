@@ -1,7 +1,7 @@
 import { Routes, Route} from 'react-router-dom';
 import React, {useState}  from 'react';
 import Home from './views/Home';
-import Onboard from './views/Onboard';
+import Onboard from './api/Onboard';
 import GamerCard from './components/GamerCard';
 import SecondNav from './components/SecondNavbar';
 import Faq from './views/Faq';
