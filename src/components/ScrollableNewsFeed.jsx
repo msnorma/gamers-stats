@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import '../styles/App.css';
 
-const ScrollableFeed = () => {
+const ScrollableNewsFeed = () => {
 
   return (
     <List sx={{ width: '100%', marginTop: '20px',bgcolor: 'transparent' }}>
@@ -48,4 +48,4 @@ const ScrollableFeed = () => {
   );
 
 }
-export default ScrollableFeed;
+export default ScrollableNewsFeed;

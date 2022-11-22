@@ -74,15 +74,19 @@
 .card-categories-community{
   width: 100%;
   box-shadow: none !important;
-  background: rgb(243,158,121);
-  background: linear-gradient(90deg, rgba(243,158,121,1) 0%, rgba(249,206,120,1) 35%, rgba(235,88,129,1) 150%);
+  background-color: transparent !important;
+  border: 1px solid #707070 !important;
+  /* background: linear-gradient(90deg, rgba(243,158,121,1) 0%, rgba(249,206,120,1) 35%, rgba(235,88,129,1) 150%); */
 }
 
-.card-tournaments-community{
+.card-tournament{
   width: 100%;
   box-shadow: none !important;
-  height: 40vh;
   background-color: #2D325A !important;
+}
+
+.MuiTabPanel-root{
+  padding: 0px !important;
 }
 
 .card-home{
