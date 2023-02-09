@@ -1,23 +1,22 @@
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import SportsEsportsOutlinedIcon from '@mui/icons-material/SportsEsportsOutlined';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 
-const TopNavList = [
+const NavBarList = [
   {
     icon: <HomeRoundedIcon fontSize="small" />,
     name: 'Home',
-    route: '/'
+    route: '/dashboard'
+  },{
+    icon: <SportsEsportsOutlinedIcon fontSize="small"/>,
+    name: 'Community',
+    route: '/community'
   },
   {
-    icon: <SportsEsportsOutlinedIcon fontSize="small"/>,
-    name: 'News',
-    route: '/news'
-  },
-  {
-    icon: <SportsEsportsOutlinedIcon fontSize="small"/>,
+    icon: <HelpOutlineOutlinedIcon fontSize="small"/>,
     name: 'FAQ',
     route: '/faq'
-  }
-  
+  },
 ]
 
-export default TopNavList;
+export default NavBarList;
