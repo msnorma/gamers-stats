@@ -1,73 +1,60 @@
 import React from 'react';
+// import { useNavigate } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import CardContent from '@mui/material/CardContent';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import Divider from '@mui/material/Divider';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import { Typography } from '@mui/material';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import ScrollableNewsFeed from '../components/ScrollableNewsFeed.jsx';
+import homePicture1 from '../assets/homePicture1.png';
 import "../styles/Card.css";
+import "../styles/Home.css";
 
 function News() {
+
+  // const [selected, setSelected]=useState(false);
+
+  // const navigate = useNavigate();
+
+  // useEffect = () =>{
+  //   //request to retrieve posts
+  // }
+
+  const handleOnclick = (e) => {
+    e.preventDefault();
+
+    // navigate("", data: id)
+  }
+
   return (
-    <div className="container-news">
-    <Typography variant="h5" gutterBottom component="div" align='left' marginTop={5} color={'#F5F5F5'}>
-      News
-    </Typography>
+    <div className="container-home">
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={6}>
-        <Card className="news-card">
+        <Card
+          className="card-home"
+          onClick={handleOnclick}>
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
+            image={homePicture1}
+            alt="news"
           />
         </Card>
         </Grid>
         <Grid item xs={6}>
-        <Card className="news-card">
+        <Card className="card-home">
           <CardMedia
             component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
+            image={homePicture1}
+            alt="news"
           />
         </Card>
         </Grid>
         <Grid item xs={12}>
-          <List sx={{ width: '100%', bgcolor: '#1C1C21', marginTop: '50px' }}>
-            <Divider variant="inset" component="li" sx={{ bgcolor: "#F5F5F5" }}/>
-            <ListItem alignItems="flex-start" >
-              <AddOutlinedIcon sx={{ color: "#F5F5F5", margin: 'auto'}} />
-              <ListItemText sx={{ color: "#F5F5F5", padding: '20px' }}
-                primary="Launch coming soon!"
-                secondary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: 'inline' }}
-                      component="span"
-                      variant="body2"
-                      color="#F5F5F5"
-                    >
-                      Fortnite
-                    </Typography>
-                    {" — I'll be in your neighborhood doing errands this…"}
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            <Divider variant="inset" component="li" sx={{ bgcolor: "#F5F5F5" }}/>
-          </List>
+          
         </Grid>
       </Grid>
     </Box>
+    <ScrollableNewsFeed/>
     </div>
   );
 }

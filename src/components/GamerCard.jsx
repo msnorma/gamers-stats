@@ -1,16 +1,16 @@
 import React from "react";
-import '../styles/Stats.css';
-// import avi from '../assets/black.png';
+import Avatar from '@mui/material/Avatar';
+import '../styles/Card.css';
 
 function GamerCard(props){
 
   return (
     <div className="stats-card">
-      <div className="card">
+      <div className="card" style={{border: 'none', backgroundColor: '#2D325A'}}>
         <div className="card-body">
           <div className="row align-items-center">
             <div className="col-1">
-              <img src="" alt="anime" className="profile-image rounded-circle"/>
+              <Avatar alt="User" src="/static/images/avatar/1.jpg" />
             </div>
             <div className="col-5">
               <h4 className="card-text">{props.fortniteStats.name}</h4>

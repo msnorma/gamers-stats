@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Footer() {
+function DashboardFooter() {
   return (
-    <div className="fixed-bottom" style={{color: "#000", textAlign:"center"}}>
-      <small>footer</small>
+    <div className="fixed-bottom" style={{color: "#707070", textAlign:"center"}}>
+      <small>&copy; WeeDigitalza {new Date().getFullYear()}</small>
     </div>
   );
 }
 
-export default Footer;
+export default DashboardFooter;

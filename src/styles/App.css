@@ -1,4 +1,5 @@
 body {
+  background-color: #25294A;
   background-color: #1C1C21;
 }
 
@@ -26,15 +27,77 @@ body {
   color: #61dafb;
 }
 
-.app {
-  margin: 0 auto;
-  display: flex;
-  margin-top: 0px;
+/* CONTAINER */
+
+.app-container{
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.container-home{
+  margin: 0px auto;
+  width: 90%;
+  margin-top: 50px;
 }
 
 .container-footer {
   position: absolute;
   bottom: 0;
+}
+
+.container-signup {
+  margin-top: 50px;
+  margin: auto 150px;
+}
+
+.image-container-form{
+  position: relative;
+}
+
+.image-form{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.container-dashboard {
+  margin: 0px auto;
+  width: 90%;
+  margin-top: 50px;
+  display: flex;
+}
+
+.container-community {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 50px;
+}
+
+.container-faq {
+  width: 100%;
+  margin-top: 150px;
+}
+
+.search-bar{
+  margin: 0 auto;
+  width: 50%;
+  top: 50%;
+  position: relative;
+}
+
+/* IMAGE PROPERTIES */
+
+.post-image{
+  width: 56px !important;
+  height: 56px !important;
+  margin-right: 10px;
+}
+
+.badges-img{
+  width: 100%
 }
 
 h3 {

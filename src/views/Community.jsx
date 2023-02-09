@@ -1,65 +1,70 @@
 import React, {useState} from 'react';
-// import {Link} from 'react-router-dom';
+import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
+import { CardActionArea } from '@mui/material';
+import CardProfile from '../components/CardProfile';
+import CardBadge from '../components/CardBadge';
+import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
-import {TabList} from '@mui/lab';
-import TabPanel from '@mui/lab/TabPanel';
 import TabContext from '@mui/lab/TabContext';
-import Challenge from "./Challenges";
-import EventList from "../components/List";
-import Tournaments from "./Tournaments";
-import Stats from "./Stats";
-import "../styles/Community.css";
-import gameCard from "../assets/fortnite.jpeg";
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
+
+import CardTournaments from '../components/CardTournament';
+import CardChallenges from '../components/CardChallenges';
+
 import '../styles/Card.css';
+import '../styles/App.css';
+import '../styles/Button.css';
 
-function Community({stats}) {
+export default function Community({stats}) {
+  
+  const [categories, setCategories]=useState("");
+  const [isSelected, setSelected]=useState("");
 
-  const [state, setState]=useState('0');
-
-   const handleOnclick = (e, value) => {
-    e.preventDefault();
-    setState(value);
-    console.log(state)
+  const changeCategory = (e,value) => {
+    setCategories(value);
+    // TODO: fix invalid value provided on render
+    console.log(categories)
   }
+
+  const handleChange = (e,newValue) => {
+    setSelected(newValue);
+  };
 
   return (
     <div className="container-community">
-      <Card sx={{ width: '100%', height: '40vh', borderRadius: '15px', backgroundColor: '#596173'}}>
-          <CardMedia
-            component="img"
-            image={gameCard}
-            alt="fortnite"
-          />
-      </Card>
-     
-      <div style={{marginTop: '20px', marginRight: '20px', marginLeft: '20px'}}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <TabContext value={state}>
-          <TabList onChange={handleOnclick} aria-label="basic tabs example" centered>
-          {
-            EventList.map((item, index) => (
-              <Tab
-                label={<span style={{color:'#fff'}}>{item.name}</span>}
-                id={`simple-tab-${index}`}
-                key={item.name}
-                value={index}
-              />
-          ))}
-          </TabList>
-        
-        {
-          EventList.map((item, index) => (
-          <TabPanel key={item.name} value={item.index}>{item.name}</TabPanel>
-          ))}
-        
-      </TabContext>
-      </Box>
-    </div>
+      <Grid container spacing={4}>
+        <Grid item xs={3}>
+          <CardProfile/>
+          <CardBadge/>
+        </Grid>
+        <Grid className="col-2-dashboard" item xs={9}>
+          <div className="row-card-catergories">
+          <Card className="card-categories-community">
+            <CardActionArea style={{outline: 'none', height: '22vh'}} value={categories} onClick={e=>changeCategory(e,"Battle Royale")} disableRipple>
+              <Typography className="cartegory-text" style={{textAlign: 'center'}} gutterBottom variant="subtitle1" component="div">
+                Battle Royale
+              </Typography>
+            </CardActionArea>
+          </Card>
+          </div>
+          <Box sx={{ width: '100%', typography: 'body1', marginTop: '20px' }}>
+            <TabContext value={isSelected}>
+              <Box sx={{ borderColor: 'none' }}>
+                <TabList onChange={handleChange} indicatorColor="transparent" aria-label="lab API tabs example">
+                  <Tab className="btn-tab" sx={{'&.Mui-selected': {outline: 'none'}}} label="Tournaments" value="1" disableRipple/>
+                  <Tab className="btn-tab" sx={{'&.Mui-selected': {outline: 'none'}}} label="Challenges" value="2" disableRipple/>
+                </TabList>
+              </Box>
+              <TabPanel value="1"><CardTournaments/></TabPanel>
+              <TabPanel value="2"><CardChallenges/></TabPanel>
+            </TabContext>
+          </Box>
+        </Grid>
+
+      </Grid>
     </div>
   );
 }
-
-export default Community;

@@ -1,0 +1,79 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-container{
+  margin-left: auto;
+}
+
+.btn-login{
+  background-color: #B255DD !important;
+  color:#fff !important;
+  /* color: -webkit-linear-gradient(#94bbe9, #eeaeca); */
+  border-radius: 15px !important;
+  box-shadow: none !important;
+  width: 90px;
+  font-size: 12px !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.btn-login:hover{
+  background-color: #B255DD !important;
+  color:#fff !important;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+.btn-login:focus{
+  outline: none;
+}
+
+.button__form{
+  border-radius: '10px';
+  width: 100%;
+  margin-top: 35px !important;
+  color:#fff !important;
+  padding: 12px !important;
+  background-color:#b255dd !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button__form:hover{
+  background-color: #c177e4 !important;
+}
+
+.community-button-toggle-group{
+  margin: 20px 0px;
+}
+
+.community-button-toggle{
+  background-color:#b255dd !important;
+  border-radius: 15px !important;
+}
+
+.btn-community{
+  background-color: #688fff !important;
+  border-radius: 15px !important;
+  box-shadow: none !important;
+  width: 90px;
+  font-size: 8px !important;
+}
+
+.btn-community:focus{
+  outline: none;
+}
+
+.btn-tab {
+  color: #8F8F8F !important;
+  padding-left: 0px !important;
+  font-size: small !important;
+}
+
+.btn-tab:focus{
+  color: #b255dd !important;
+  font-weight: 600;
+}
+
+.MuiButtonBase-root{
+  color: #fff;
+}

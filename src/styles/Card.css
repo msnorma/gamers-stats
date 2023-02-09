@@ -1,6 +1,4 @@
-.container-signup {
-  margin: 40px 50px 0px 50px;
-}
+
 
 .container-news {
   margin: 50px 100px 0px 100px;
@@ -11,7 +9,114 @@
   height: 40vh;
 }
 
-.container-community {
+.card-dashboard{
+  background-color: #fff !important;
   width: 100%;
-  margin: 50px 100px;
+  box-shadow: none !important;
+  height: 35vh;
 }
+
+/* Stats Card */
+
+.stats-card {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #0c223d !important;
+}
+
+/* User Profile Card */
+.card-profile-dashboard{
+  background-color: #2D325A !important;
+  width: 100%;
+  box-shadow: none !important;
+  height: 50vh;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+.ranking-box{
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #373D6D;
+  color: #fff;
+}
+
+.profile-picture {
+  margin: auto;
+  margin-top: 30px;
+  height: 80px !important;
+  width: 80px !important;
+}
+
+.profile-description {
+  text-align: center;
+  justify-content: center !important;
+}
+
+.card-badge-dashboard{
+  width: 100%;
+  box-shadow: none !important;
+  height: 25vh;
+  margin-right: 20px;
+  background-color: #2D325A !important;
+}
+
+.card-info-dashboard{
+  width: 100%;
+  box-shadow: none !important;
+  height: 44vh;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.card-categories-community{
+  width: 100%;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border: 1px solid #707070 !important;
+  /* background: linear-gradient(90deg, rgba(243,158,121,1) 0%, rgba(249,206,120,1) 35%, rgba(235,88,129,1) 150%); */
+}
+
+.card-tournament{
+  width: 100%;
+  box-shadow: none !important;
+  background-color: #2D325A !important;
+}
+
+.MuiTabPanel-root{
+  padding: 0px !important;
+}
+
+.card-home{
+  background-color: #fff !important;
+  /* margin-top: 80px; */
+  width: 100%;
+  box-shadow: none !important;
+  height: 35vh;
+}
+
+.card-img-home{
+  height: 35vh;
+  object-fit: unset;
+}
+
+.sm-card-img-home{
+  background-color: #fff !important;
+  box-shadow: none !important;
+  height: 30vh;
+}
+
+.glass-box {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+}
+
+/* .MuiTableCell-root {
+  border-bottom: none;
+} */

@@ -6,3 +6,12 @@
   background-size: cover;
   position: relative;
 } */
+
+.tabs:hover{
+  color: #010402;
+}
+
+.grid-home {
+  margin-top: 50px !important;
+}
+
