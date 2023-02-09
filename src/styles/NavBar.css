@@ -21,7 +21,7 @@
 .nav__list{
   list-style-type: none;
   display: flex;
-  padding: 20px;
+  padding: 20px 0px;
   margin: 0px auto;
   width: 90%;
 }
@@ -35,6 +35,6 @@
 }
 
 .nav__box{
-  width: 80%;
+  width: 100%;
   margin: 0px auto;
 }
